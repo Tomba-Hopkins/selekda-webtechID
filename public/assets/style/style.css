@@ -1,0 +1,40 @@
+:root {
+    --dark-primary: #1E2022;
+    --dark-secondary: #52616B;
+    --light-primary: #F0F5F9;
+    --light-secondary: #C9D6DF;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: var(--dark-primary);
+    color: var(--light-primary);
+}
+
+
+nav {
+    width: 100vw;
+    height: 10vh;
+    /* position: fixed; */
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1rem 0;
+    border-bottom: 0.1rem solid var(--dark-secondary);
+}
+
+nav .nav-link a {
+    margin: 0 0.2rem;
+    text-decoration: none;
+    color: var(--light-primary);
+}
+
+
+.logo {
+    width: 7rem;
+    padding: 1rem;
+}
