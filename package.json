@@ -1,6 +1,7 @@
 {
   "dependencies": {
-    "@hapi/hapi": "^21.3.10"
+    "@hapi/hapi": "^21.3.10",
+    "@hapi/inert": "^7.1.0"
   },
   "name": "selekda-webtechid",
   "version": "1.0.0",
