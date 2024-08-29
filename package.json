@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "@hapi/hapi": "^21.3.10"
+  },
+  "name": "selekda-webtechid",
+  "version": "1.0.0",
+  "main": "server.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
