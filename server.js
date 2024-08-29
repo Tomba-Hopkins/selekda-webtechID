@@ -6,8 +6,8 @@ const run = () => {
 
 
     const server = Hapi.server({
-        host: 'localhost',
-        port: 5000
+        host: '0.0.0.0',
+        port: process.env.PORT || 3000
     })
 
 
