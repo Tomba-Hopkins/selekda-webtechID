@@ -1,7 +1,7 @@
 const Hapi = require('@hapi/hapi')
 
 
-const run = () => {
+const run = async () => {
 
 
 
@@ -20,7 +20,7 @@ const run = () => {
     })
 
 
-    server.start()
+    await server.start()
     console.log(`Server started on http://localhost:5000`)
 
     
