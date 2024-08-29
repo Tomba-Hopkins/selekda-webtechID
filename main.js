@@ -21,7 +21,7 @@ const run = async () => {
 
 
     await server.start()
-    console.log(`Server started on http://localhost:5000`)
+    console.log(`Server started on http://localhost:3000`)
 
     
 }
