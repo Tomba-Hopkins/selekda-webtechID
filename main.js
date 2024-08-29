@@ -11,13 +11,22 @@ const run = async () => {
     })
 
 
-    server.route({
-        path: '/',
-        method: 'GET',
-        handler: (req, h) => {
-            return h.response('Hewwo').code(200)
+    server.route([
+        {
+            path: '/',
+            method: 'GET',
+            handler: (req, h) => {
+                return h.response('Hewwo').code(200)
+            }
+        },
+        {
+            path: '/bakwan',
+            method: 'GET',
+            handler: (req, h) => {
+                return h.response('bakwan jagung').code(200)
+            }
         }
-    })
+    ])
 
 
     await server.start()
