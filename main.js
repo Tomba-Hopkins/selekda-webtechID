@@ -4,8 +4,8 @@ const path = require('path')
 const run = async () => {
     
     const server = Hapi.server({
-        // host: 'localhost',
-        host: '0.0.0.0',
+        host: 'localhost',
+        // host: '0.0.0.0',
         port: process.env.PORT || 3000
     })
     
@@ -17,8 +17,21 @@ const run = async () => {
             method: 'GET', 
             path: '/',
             handler: (req, h) => {
-                console.log(__dirname)
                 return h.file(path.join(__dirname, 'public' , 'views', 'index.html'))
+            }
+        },
+        {
+            method: 'GET',
+            path: '/head-football',
+            handler: (req, h) => {
+                return h.file(path.join(__dirname, 'public', 'views', 'head.html'))
+            }
+        },
+        {
+            method: 'GET',
+            path: '/dsgn',
+            handler: (req, h) => {
+                return h.file(path.join(__dirname, 'public', 'views', 'dsgn.html'))
             }
         },
         {
@@ -47,6 +60,27 @@ const run = async () => {
                     path: path.join(__dirname, 'public', 'assets', 'script')
     
                 }
+            }
+        },
+        {
+            method: 'GET',
+            path: '/blog',
+            handler: (req, h) => {
+                return h.response('Blog Page').code(200)
+            }
+        },
+        {
+            method: 'GET',
+            path: '/portfolio',
+            handler: (req, h) => {
+                return h.response('Portfolio Page').code(200)
+            }
+        },
+        {
+            method: 'GET',
+            path: '/admin',
+            handler: (req, h) => {
+                return h.response('Admin Page').code(200)
             }
         },
     ])
