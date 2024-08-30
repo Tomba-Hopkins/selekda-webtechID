@@ -1,6 +1,8 @@
 const Hapi = require('@hapi/hapi')
 const routes  = require('./routes/routes')
 
+const { getLandingPage } = require('./handler/handler')
+
 const run = async () => {
     
     const server = Hapi.server({
