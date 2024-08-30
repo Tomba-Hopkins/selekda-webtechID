@@ -76,17 +76,6 @@ main {
     border-radius: 1rem;
     border: 0.1rem solid red;
     transition: 0.2s linear;
-    cursor: pointer;
-}
-
-@keyframes fade {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-    
 }
 
 .hero:hover {
