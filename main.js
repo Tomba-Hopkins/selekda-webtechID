@@ -4,8 +4,7 @@ const path = require('path')
 const run = async () => {
     
     const server = Hapi.server({
-        host: 'localhost',
-        // host: '0.0.0.0',
+        host: '0.0.0.0',
         port: process.env.PORT || 3000
     })
     
@@ -85,9 +84,9 @@ const run = async () => {
         },
         {
             method: 'GET',
-            path: '/flag',
+            path: '/selekda.zip',
             handler: (req, h) => {
-                return h.file('./flag.txt', {
+                return h.file('./selekda.zip', {
                     mode: 'attachment'
                 })
             }
