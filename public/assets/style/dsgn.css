@@ -1,0 +1,70 @@
+:root {
+    --dark-primary: #1E2022;
+    --dark-secondary: #52616B;
+    --light-primary: #F0F5F9;
+    --light-secondary: #C9D6DF;
+}
+
+body {
+    margin: 0;
+    padding: 1rem;
+    box-sizing: border-box;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--dark-primary);
+    color: var(--light-primary);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.drawing-book {
+    height: 80%;
+    width: 100%;
+    background-color: var(--dark-secondary);
+    border-radius: 1rem;
+    display: flex;
+    cursor:grabbing;
+}
+
+
+.drawing-book .tools {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: var(--light-secondary);
+    width: 10%;
+    text-align: center;
+    border-radius: 1rem;
+}
+
+.drawing-book .tools p {
+    cursor: pointer;
+    transition: 0.2s linear;
+    color: var(--dark-primary);
+}
+
+.drawing-book .tools p:nth-child(1) {
+    border: 0.2rem solid red;
+}
+.drawing-book .tools p:nth-child(2) {
+    border: 0.2rem solid blue;
+}
+.drawing-book .tools p:nth-child(3) {
+    border: 0.2rem solid var(--dark-primary);
+}
+
+.drawing-book .tools p:nth-child(1):hover {
+    background-color: rgba(255, 0, 0, 0.502);
+    color: var(--light-primary);
+}
+
+.drawing-book .tools p:nth-child(2):hover {
+    background-color: rgba(0, 0, 255, 0.539);
+    color: var(--light-primary);
+}
+
+.drawing-book .tools p:nth-child(3):hover {
+    background-color: var(--dark-secondary);
+    color: var(--light-primary);
+}
