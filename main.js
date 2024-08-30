@@ -42,7 +42,7 @@ const run = async () => {
             path: '/script/{file*}',
             handler: {
                 directory: {
-                    path: path.join(dir, 'public', 'assets', 'script')
+                    path: path.join(__dirname, 'public', 'assets', 'script')
     
                 }
             }
