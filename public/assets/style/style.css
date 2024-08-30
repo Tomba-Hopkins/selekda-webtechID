@@ -38,3 +38,29 @@ nav .nav-link a {
     width: 7rem;
     padding: 1rem;
 }
+
+
+
+main {
+    width: 100vw;
+    display: flex;
+    padding: 3rem 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.h2-hero {
+    width: 40%;
+    border-bottom: 0.2rem solid;
+    text-align: center;
+    padding-bottom: 1rem;
+    margin-right: 2rem;
+    background-image: linear-gradient(to right, red, var(--light-secondary) 70%);
+    color: transparent;
+    background-clip: text;
+}
+
+.hero {
+    width: 40%;
+    border-radius: 1rem;
+}
