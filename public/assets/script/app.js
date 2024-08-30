@@ -16,7 +16,6 @@ const acakImage = () => {
     ]
 
     const result = Math.floor(Math.random() * kardus.length)
-    console.log(kardus[0])
 
     return `/img/` + kardus[result]
 }
