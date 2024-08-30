@@ -4,8 +4,8 @@ const {
 
 const routes = (dir) => [
     {
+        method: 'GET', 
         path: '/',
-        method: 'GET',
         handler: getLandingPage(dir)
     },
     {
