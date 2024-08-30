@@ -9,15 +9,20 @@ body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
+
     background-color: var(--dark-primary);
     color: var(--light-primary);
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 
 nav {
     width: 100vw;
     height: 10vh;
-    /* position: fixed; */
+    position: fixed;
+    background-color: var(--dark-primary)/30%;
+    backdrop-filter: blur(10px);
     top: 0;
     right: 0;
     display: flex;
@@ -25,12 +30,18 @@ nav {
     justify-content: space-evenly;
     padding: 1rem 0;
     border-bottom: 0.1rem solid var(--dark-secondary);
+    margin-bottom: 3rem;
 }
 
 nav .nav-link a {
-    margin: 0 0.2rem;
+    margin: 0 1rem;
     text-decoration: none;
     color: var(--light-primary);
+    transition: 0.2s linear;
+}
+
+nav .nav-link a:hover {
+    color: var(--dark-secondary);
 }
 
 
@@ -43,15 +54,15 @@ nav .nav-link a {
 
 main {
     width: 100vw;
+    height: 90vh;
     display: flex;
     padding: 3rem 0;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 .h2-hero {
-    width: 40%;
-    border-bottom: 0.2rem solid;
+    width: 20rem;
     text-align: center;
     padding-bottom: 1rem;
     margin-right: 2rem;
@@ -61,6 +72,55 @@ main {
 }
 
 .hero {
-    width: 40%;
+    width: 20rem;
     border-radius: 1rem;
+    border: 0.1rem solid red;
+}
+
+
+
+
+.about {
+    width: 100vw;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.about h2 {
+    border-bottom: 0.1rem solid var(--light-secondary);
+    padding: 0.1rem 1rem;
+    color: var(--light-secondary);
+}
+
+.about p {
+    background-image: linear-gradient(to right, var(--light-primary), var(--dark-secondary) );
+    color: transparent;
+    background-clip: text;
+}
+
+
+@media (max-width: 700px) {
+
+    nav .nav-link a {
+        margin: 0 0.4rem;
+    }
+
+    main {
+        justify-content: center;
+        height: 60vh;
+    }
+    
+    .h2-hero {
+        width: 10rem;
+    }
+
+    .hero {
+        width: 10rem;
+    }
+
+
 }
