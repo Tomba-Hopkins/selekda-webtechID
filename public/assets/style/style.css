@@ -167,6 +167,16 @@ main {
     border: 0.2rem solid var(--light-primary);
 }
 
+.portfolio .projects .project p {
+    font-size: small;
+    text-align: center;
+}
+
+.portfolio .projects .project button {
+    padding: 0.6rem;
+    border-radius: 0.4rem;
+}
+
 @media (max-width: 700px) {
 
     nav .nav-link a {
