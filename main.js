@@ -1,5 +1,6 @@
 const Hapi = require('@hapi/hapi')
 const routes  = require('./routes/routes')
+const path = require('path')
 
 // const { getLandingPage } = require('./handler/handler')
 
