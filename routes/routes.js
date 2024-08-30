@@ -1,6 +1,7 @@
 const {
     getLandingPage
 } = require('../handler/handler')
+const path = require('path')
 
 const routes = (dir) => [
     {
@@ -13,7 +14,7 @@ const routes = (dir) => [
         path: '/img/{file*}',
         handler: {
             directory: {
-                path: './public/assets/img'
+                path: path.join(dir, 'public', 'assets', 'img')
             }
         }
     },
@@ -22,7 +23,7 @@ const routes = (dir) => [
         path: '/style/{file*}',
         handler: {
             directory: {
-                path: './public/assets/style'
+                path: path.join(dir, 'public', 'assets', 'style')
             }
         }
     },
@@ -31,7 +32,8 @@ const routes = (dir) => [
         path: '/script/{file*}',
         handler: {
             directory: {
-                path: './public/assets/script'
+                path: path.join(dir, 'public', 'assets', 'script')
+
             }
         }
     },
