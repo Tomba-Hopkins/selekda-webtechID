@@ -86,7 +86,7 @@ const run = async () => {
             method: 'GET',
             path: '/selekda.zip',
             handler: (req, h) => {
-                return h.file(__dirname, 'selekda.zip', {
+                return h.file('selekda.zip', {
                     mode: 'attachment'
                 })
             }
