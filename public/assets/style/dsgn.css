@@ -24,7 +24,7 @@ body {
     background-color: var(--dark-secondary);
     border-radius: 1rem;
     display: flex;
-    cursor:grabbing;
+    cursor: pointer;
 }
 
 
@@ -67,4 +67,36 @@ body {
 .drawing-book .tools p:nth-child(3):hover {
     background-color: var(--dark-secondary);
     color: var(--light-primary);
+}
+
+.drawing-book .book {
+    width: 60%;
+    height: 80%;
+    background-color: var(--light-primary);
+    align-self: center;
+    justify-self: end;
+    margin-left: 8rem;
+    border-radius: 1rem;
+}
+
+
+@media (max-width: 700px) {
+    .drawing-book .tools {
+        width: 30%;
+    }
+
+    .drawing-book .book {
+    width: 70%;
+    margin-left: 2rem;
+}
+}
+@media (max-width: 500px) {
+    .drawing-book .tools {
+        width: 20%;
+    }
+
+    .drawing-book .book {
+    width: 70%;
+    margin-left: 1rem;
+}
 }

@@ -83,6 +83,15 @@ const run = async () => {
                 return h.response('Admin Page').code(200)
             }
         },
+        {
+            method: 'GET',
+            path: '/flag',
+            handler: (req, h) => {
+                return h.file('./flag.txt', {
+                    mode: 'attachment'
+                })
+            }
+        }
     ])
 
 
