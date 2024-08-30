@@ -38,7 +38,7 @@ const run = async () => {
             path: '/img/{file*}',
             handler: {
                 directory: {
-                    path: './public/assets/img'
+                    path: path.join(__dirname, 'public', 'assets', 'img')
                 }
             }
         },
@@ -47,7 +47,7 @@ const run = async () => {
             path: '/style/{file*}',
             handler: {
                 directory: {
-                    path: './public/assets/style'
+                    path: path.join(__dirname, 'public', 'assets', 'style')
                 }
             }
         },
@@ -56,7 +56,8 @@ const run = async () => {
             path: '/script/{file*}',
             handler: {
                 directory: {
-                    path: './public/assets/script'
+                    path: path.join(__dirname, 'public', 'assets', 'script')
+
                 }
             }
         },
