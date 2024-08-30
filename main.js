@@ -1,4 +1,5 @@
 const Hapi = require('@hapi/hapi')
+const path = require('path')
 const { getLandingPage } = require('./handler/handler')
 
 const run = async () => {
