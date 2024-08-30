@@ -1,6 +1,5 @@
 const Hapi = require('@hapi/hapi')
 const path = require('path')
-const { getLandingPage } = require('./handler/handler')
 
 const run = async () => {
     
@@ -17,7 +16,10 @@ const run = async () => {
         {
             method: 'GET', 
             path: '/',
-            handler: getLandingPage(__dirname)
+            handler: (req, h) => {
+                console.log(__dirname)
+                return h.file(path.join(__dirname, 'public' , 'views', 'index.html'))
+            }
         },
         {
             method: 'GET',
