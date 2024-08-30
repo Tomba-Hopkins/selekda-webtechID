@@ -93,7 +93,7 @@ main {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-bottom: 5rem;
+    margin-bottom: 8rem;
 }
 
 .about h2 {
@@ -124,6 +124,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-bottom: 5rem;
 }
 
 .portfolio h2 {
@@ -143,7 +144,6 @@ main {
     width: 90%;
     height: 60%;
     padding: 1rem;
-    background-color: var(--dark-secondary);
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -152,12 +152,14 @@ main {
 .portfolio .projects .project {
     height: 100%;
     width: 12rem;
-    background-color: black;
+    background-color: var(--dark-secondary);
     border-radius: 1rem;
     padding: 0.2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
 }
 
 .portfolio .projects .project img {
@@ -175,6 +177,82 @@ main {
 .portfolio .projects .project button {
     padding: 0.6rem;
     border-radius: 0.4rem;
+    cursor: pointer;
+    background-color: var(--dark-primary);
+    color: var(--light-primary);
+    font-weight: bold;
+    transition: 0.2s linear;
+}
+.portfolio .projects .project button:hover {
+    background-color: var(--dark-secondary);
+    color: var(--light-secondary);
+}
+
+.portfolio .projects .project button:active{
+    background-color: #C9D6DF;
+    color: var(--dark-primary);
+    transform: scale(1.1);
+}
+
+
+
+.testimonials {
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.testimonials h2 {
+    border-bottom: 0.1rem solid var(--light-secondary);
+    padding: 0.1rem 3rem;
+    color: var(--light-secondary);
+    margin-bottom: 2rem;
+    transition: 0.2s linear;
+    cursor: pointer;
+}
+
+.testimonials h2:hover {
+    padding: 0.1rem 1rem;
+}
+
+.testimonials .container {
+    width: 70%;
+    height: 30%;
+    background-color: var(--dark-secondary);
+    border-radius: 2rem;
+    display: flex;
+    overflow: hidden;
+}
+
+.testimonials .container .client {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    padding: 1rem;
+    gap: 7rem;
+    animation: finite 6s linear infinite;
+}
+
+.testimonials .container .client img {
+    height: 70%;
+    filter:opacity(0.5);
+    transition: 0.1s linear;
+}
+
+.testimonials .container .client img:hover {
+    filter: opacity(1);
+}
+
+@keyframes finite {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
 @media (max-width: 700px) {
