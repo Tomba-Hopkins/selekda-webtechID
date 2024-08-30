@@ -1,5 +1,5 @@
 const Hapi = require('@hapi/hapi')
-const routes  = require('./routes/routes')
+const { getLandingPage } = require('./handler/handler')
 
 const run = async () => {
     
@@ -12,7 +12,41 @@ const run = async () => {
     await server.register(require('@hapi/inert'))
 
 
-    server.route(routes(__dirname))
+    server.route([
+        {
+            method: 'GET', 
+            path: '/',
+            handler: getLandingPage(__dirname)
+        },
+        {
+            method: 'GET',
+            path: '/img/{file*}',
+            handler: {
+                directory: {
+                    path: path.join(__dirname, 'public', 'assets', 'img')
+                }
+            }
+        },
+        {
+            method: 'GET',
+            path: '/style/{file*}',
+            handler: {
+                directory: {
+                    path: path.join(__dirname, 'public', 'assets', 'style')
+                }
+            }
+        },
+        {
+            method: 'GET',
+            path: '/script/{file*}',
+            handler: {
+                directory: {
+                    path: path.join(dir, 'public', 'assets', 'script')
+    
+                }
+            }
+        },
+    ])
 
 
     await server.start()
